@@ -55,7 +55,7 @@ function updateCity(event) {
   if (cityTimeZone === "current") cityTimeZone = moment.tz.guess();
 
   let cityName = cityTimeZone.split("/")[1].replace("_", " ");
-  alert(`you selected: " ${cityName}`);
+  alert(`You selected: ${cityName}`);
 
 
 

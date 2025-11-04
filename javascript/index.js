@@ -47,10 +47,19 @@ function updateClocks() {
 function updateCity(event) {
   let cityTimeZone = event.target.value;
 
-  if (cityTimeZone === "Select a city") return;
+  if (cityTimeZone === "Select a city") {
+    alert("Please select a valid city the list.");
+    return
+  }
+   
   if (cityTimeZone === "current") cityTimeZone = moment.tz.guess();
 
   let cityName = cityTimeZone.split("/")[1].replace("_", " ");
+  alert(`you selected: " ${cityName}`);
+
+
+
+
   let citiesElement = document.querySelector("#cities");
 
   citiesElement.innerHTML = `
